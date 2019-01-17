@@ -14,9 +14,9 @@ public class BugTests {
 	@Test
 	public void testMinimum2() {
 		// Expect IllegalArgumentException if called with null
-		assertThrows(IllegalArgumentException.class, () -> Bug.minimum(null));
+		assertThrows(NullPointerException.class, () -> Bug.minimum(null));
 
 		// Expect IllegalArgumentException if called with empty array
-		assertThrows(IllegalArgumentException.class, () -> Bug.minimum(new int[0]));
+		assertThrows(ArrayIndexOutOfBoundsException.class, () -> Bug.minimum(new int[0]));
 	}
 }
